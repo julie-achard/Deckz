@@ -1,5 +1,5 @@
 import Card from "./Card.js";
-import Deck from "./module/Deck.js";
+import Deck from "./Deck.js";
 //Créer un objet littéral
 const options = {
   values: ["A", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"],
