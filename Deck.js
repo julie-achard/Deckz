@@ -4,9 +4,7 @@ import shuffle from "./node_modules/lodash-es/shuffle.js";
 class Deck {
   //options du deck
   constructor(options) {
-    //Deux propriétés values et suits
-    this.values = options.values;
-    this.suit = options.suits;
+    this.options = options;
     this.createFullDeck();
   }
 
@@ -17,7 +15,9 @@ class Deck {
   createFullDeck() {
     this.options.values.forEach((value) => {
       this.options.suits.forEach((suit) => {
-        this.#cards.push(new Card(value, suit));
+        const card = new Card(value, suit);
+        this.#cards.push(card);
+        // console.log(this.#cards)
       });
     });
   }
@@ -31,8 +31,8 @@ class Deck {
     });
   }
 
-  cardshuffle() {
-    _.shuffle(this.#cards);
+  shuffleCards() {
+    this.#cards = shuffle(this.#cards);
   }
 }
 export default Deck;
