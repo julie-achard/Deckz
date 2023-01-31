@@ -7,6 +7,7 @@ class Deck {
     //Deux propriétés values et suits
     this.values = options.values;
     this.suit = options.suits;
+    this.createFullDeck();
   }
 
   //Création des cartes
@@ -14,14 +15,19 @@ class Deck {
   #cards = [];
   //Méthode createFullDeck() avec les options, génère une carte par combinaison possible.
   createFullDeck() {
-    this.#cards.push(new Card(value, suit));
+    this.options.values.forEach((value) => {
+      this.options.suits.forEach((suit) => {
+        this.#cards.push(new Card(value, suit));
+      });
+    });
   }
+
   //Méthode displayCards() qui avec #cards[]
   displayCard() {
     //affiche chaque carte
     this.#cards.forEach((card) => {
       //en appelant la métjode display()
-      card.cardshuffle().display();
+      card.display();
     });
   }
 
