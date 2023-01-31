@@ -1,3 +1,4 @@
+import Card from "./Card.js";
 import Deck from "./module/Deck.js";
 //Créer un objet littéral
 const options = {
@@ -5,6 +6,6 @@ const options = {
   suits: ["Hearts", "Diamonds", "Spades", "Clubs"],
 };
 
-const deck1 = new Deck(values, suits);
+const deck1 = new Deck(options);
 deck1.cardshuffle();
 deck1.displayCard();
