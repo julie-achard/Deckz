@@ -5,12 +5,15 @@
   "browserslist": "> 0.25%, not dead",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start" : "parcel index.html",
+    "start": "parcel index.html",
     "build": "parcel build index.html"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "parcel": "^2.8.3"
+  },
+  "dependencies": {
+    "lodash-es": "^4.17.21"
   }
 }
